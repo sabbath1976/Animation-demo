@@ -10,3 +10,125 @@ html {
     box-sizing: border-box;
     font-size: 62.5%;
 }
+
+body {
+    background-color: rgb(5, 0, 68);
+    position: relative;
+    overflow: hidden;
+}
+
+.floating-boxes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.floating-boxes li {
+    position: absolute;
+    list-style: none;
+    width: 2rem;
+    height: 2rem;
+    background-image: linear-gradient(
+        135deg,
+        rgba(238, 154, 230, 0.459) 10%,
+        rgba(88, 96, 249, 0.452) 100%
+    );
+    bottom: -110rem;
+    animation: floatingBox 25s linear infinite;
+}
+
+.floating-boxes li:nth-child(1) {
+    left: 25%;
+    width: 6rem;
+    height: 6rem;
+    animation-delay: 1s;
+    animation-duration: 15s;
+}
+
+.floating-boxes li:nth-child(2) {
+    left: 10%;
+    width: 9rem;
+    height: 9rem;
+    animation-delay: 4s;
+    animation-duration: 10s;
+}
+
+.floating-boxes li:nth-child(3) {
+    left: 45%;
+    width: 6rem;
+    height: 6rem;
+    animation-delay: 6s;
+    animation-duration: 20s;
+}
+
+.floating-boxes li:nth-child(4) {
+    left: 65%;
+    width: 11rem;
+    height: 11rem;
+    animation-delay: 10s;
+    animation-duration: 4s;
+}
+
+.floating-boxes li:nth-child(5) {
+    left: 35%;
+    width: 10rem;
+    height: 10rem;
+    animation-delay: 7s;
+    animation-duration: 18s;
+}
+
+.floating-boxes li:nth-child(6) {
+    left: 75%;
+    width: 2rem;
+    height: 2rem;
+    animation-delay: 9s;
+    animation-duration: 12s;
+}
+
+.floating-boxes li:nth-child(7) {
+    left: 95%;
+    width: 8rem;
+    height: 8rem;
+    animation-delay: 3s;
+    animation-duration: 25s;
+}
+
+.floating-boxes li:nth-child(8) {
+    left: 55%;
+    width: 7rem;
+    height: 7rem;
+    animation-delay: 8s;
+    animation-duration: 8s;
+}
+
+.floating-boxes li:nth-child(9) {
+    left: 85%;
+    width: 5rem;
+    height: 5rem;
+    animation-delay: 5s;
+    animation-duration: 6s;
+}
+
+.floating-boxes li:nth-child(10) {
+    left: 5%;
+    width: 4rem;
+    height: 4rem;
+    animation-delay: 12s;
+    animation-duration: 11s;
+}
+
+@keyframes floatingBox {
+    0% {
+        transform: translateY(0) rotate(0);
+        opacity: 0;
+        border-radius: 0;
+    }
+
+    100% {
+        transform: translateY(-110rem) rotate(1080deg);
+        opacity: 1;
+        border-radius: 50%;
+    }
+}
